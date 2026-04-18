@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link href="./CSS/entrada.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="menu">
+    <div class="logo">
+  <img src="IMG/logo.png" alt="Logo Parking SB">
+  <span>Parking SB</span>
+</div>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="entrada.html">Entrada</a></li>
+        <li><a href="salida.html">Salida</a></li>
+        <li><a href="lista.html">Vehículos</a></li>
+        <li><a href="historial.html">Historial</a></li>
+    </ul>
+    </nav>
+
+        <div class="container">
+   <div class="hero">
+    <h1>Registrar Ingreso</h1>
+    <div id="reloj" style="font-size: 1.5rem; color: #00c3ff; font-weight: bold; margin-top: 5px;">00:00:00</div>
+    <p>Completa los datos del vehículo para iniciar el cronómetro.</p>
+</div>
+
+    <div class="card-form">
+        <form id="formParqueadero">
+            <div class="input-group">
+                <label>Número de Placa:</label>
+                <input type="text" id="placa" placeholder="ABC-123" required>
+            </div>
+
+            <div class="input-group">
+                <label>Tipo de Vehículo:</label>
+                <select id="tipoVehiculo">
+                    <option value="Carro">Carro</option>
+                    <option value="Moto">Moto</option>
+                </select>
+                    </div>
+
+            <button type="submit" class="btn-guardar">Guardar Ingreso</button>
+                <div class="botones-navegacion">
+                <a href="index.html" class="btn-nav btn-inicio"> Volver al Inicio</a>
+                <a href="salida.html" class="btn-nav btn-salida"> Ir a Salida</a>
+                </div>
+        </form>
+    </div>
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/entrada.js"></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+/* 1. CONTENEDOR (Sube todo el bloque) */
+.container {
+    padding-top: 40px; /* Reducido para que suba respecto al menú */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. BLOQUE NEGRO (Subido con margen negativo) */
+.hero {
+    background: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: -10px; /* Sube un poco más */
+    margin-bottom: 5px; 
+    width: fit-content;
+}
+
+.hero h1 {
+    margin: 0; color: white; font-size: 1.8rem;
+    }
+
+
+.hero p { 
+    margin: 5px 0 0 0; color: white; font-size: 0.9rem; 
+}
+
+/* 3. TU FORMULARIO (Recuperando el ancho y orden) */
+.card-form {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px; 
+    width: 380px; /* Ancho original para que no se vea encogido */
+    margin: 10px auto; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 4. GRUPOS DE ENTRADA (Esto es lo que arregla el daño) */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;           /* Volvemos a activar flex */
+    flex-direction: column;  /* Etiqueta arriba, input abajo */
+    text-align: left;        /* Alineado a la izquierda */
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #00c3ff; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.input-group input, .input-group select {
+    width: 100%;             /* IMPORTANTE: Que ocupen todo el ancho del cuadro */
+    box-sizing: border-box;  /* Evita que se salgan del borde */
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #000000; 
+    background: white; 
+    color: #000000 !important; 
+    font-weight: bold;
+    outline: none;
+}
+
+/* 5. BOTÓN (Recuperando el estilo azul) */
+.btn-guardar {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #00c3ff 0%, #0077ff 100%);
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Contenedor para alinear los botones uno al lado del otro */
+.botones-navegacion {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Estilo base para los botones de navegación */
+.btn-nav {
+    flex: 1; /* Hace que ambos midan lo mismo */
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Botón de Inicio (Más sobrio) */
+.btn-inicio {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Botón de Salida (Con un toque de color diferente) */
+.btn-salida {
+    background: rgba(0, 195, 255, 0.2);
+    color: #00c3ff;
+}
+
+/* Efectos al pasar el mouse */
+.btn-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 195, 255, 0.3);
+    background: rgba(0, 195, 255, 0.4);
+    color: white;
+}
+
+#reloj {
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo digital */
+    letter-spacing: 2px;
+}

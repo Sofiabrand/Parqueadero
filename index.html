@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Parking SB</title>
+</head>
+<body>
+<!-- MENÚ -->
+
+    <nav class="menu">
+    <div class="logo">
+  <img src="IMG/logo.png" alt="Logo Parking SB">
+  <span>Parking SB</span>
+</div>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="entrada.html">Entrada</a></li>
+        <li><a href="salida.html">Salida</a></li>
+        <li><a href="lista.html">Vehículos</a></li>
+        <li><a href="historial.html">Historial</a></li>
+    </ul>
+    </nav>
+
+<!-- CONTENIDO -->
+
+    <div class="container">
+    <div class="hero">
+  <h1>Bienvenido al Sistema de Parqueadero</h1>
+  <p>Administra entradas, salidas y control de vehículos.</p>
+</div>
+
+
+<div class="cards">
+    <a href="lista.html" style="text-decoration: none; color: white;">
+        <div class="card">
+            <h3>Vehículos Activos</h3>
+            <p id="vehiculos"></p>
+        </div>
+    </a>
+
+    <div class="card">
+        <h3>Cupos Disponibles</h3>
+        <p id="cupos"></p>
+    </div>
+</div>
+
+
+    </div>
+
+    <script src="./JS/inicio.js"></script>
+</body>
+</html>

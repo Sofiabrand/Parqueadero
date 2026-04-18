@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos - Parking SB</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/entrada.css">
+    <link rel="stylesheet" href="./CSS/lista.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Logo Parking SB">
+            <span>Parking SB</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="entrada.html">Entrada</a></li>
+            <li><a href="salida.html">Salida</a></li>
+            <li><a href="lista.html">Vehículos</a></li>
+            <li><a href="historial.html">Historial</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Vehículos en el Parqueadero</h1>
+            <p>Lista de todos los vehículos actualmente estacionados.</p>
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <div class="barra-busqueda">
+            <input type="text" id="inputBuscar" placeholder="🔍 Buscar por placa..." oninput="filtrarVehiculos()">
+        </div>
+
+        <!-- Contador -->
+        <div class="contador-info">
+            <span id="contadorTexto">Cargando...</span>
+        </div>
+
+        <!-- Tabla de vehículos -->
+        <div class="tabla-wrapper">
+            <table id="tablaVehiculos">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Placa</th>
+                        <th>Tipo</th>
+                        <th>Hora de Ingreso</th>
+                        <th>Tiempo Activo</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                    <!-- Las filas se generan con JavaScript -->
+                </tbody>
+            </table>
+
+            <!-- Mensaje si no hay vehículos -->
+            <div id="mensajeVacio" class="mensaje-vacio" style="display:none;">
+                <p>🅿️ El parqueadero está vacío en este momento.</p>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="botones-navegacion" style="max-width:400px; margin: 20px auto;">
+            <a href="index.html" class="btn-nav btn-inicio">Volver al Inicio</a>
+            <a href="entrada.html" class="btn-nav btn-salida">Registrar Entrada</a>
+        </div>
+    </div>
+
+    <script src="./JS/lista.js"></script>
+</body>
+</html> 

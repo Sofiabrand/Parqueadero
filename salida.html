@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salida - Parking SB</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/entrada.css"> </head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Logo Parking SB">
+            <span>Parking SB</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="entrada.html">Entrada</a></li>
+            <li><a href="salida.html">Salida</a></li>
+            <li><a href="lista.html">Vehículos</a></li>
+            <li><a href="historial.html">Historial</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Registrar Salida</h1>
+            <p>Ingresa la placa para calcular el cobro.</p>
+        </div>
+
+        <div class="card-form">
+            <form id="formSalida">
+                <div class="input-group">
+                    <label>Número de Placa:</label>
+                    <input type="text" id="placaSalida" placeholder="ABC-123" required>
+                </div>
+
+                <button type="submit" class="btn-guardar" style="background: linear-gradient(135deg, #ff4d4d 0%, #cc0000 100%); color: white;">
+                    Procesar Salida
+                </button>
+
+                <div class="botones-navegacion">
+                    <a href="index.html" class="btn-nav btn-inicio">Inicio</a>
+                    <a href="entrada.html" class="btn-nav btn-salida">Nueva Entrada</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/salida.js"></script>
+</body>
+</html>

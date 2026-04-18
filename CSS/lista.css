@@ -1,0 +1,115 @@
+/* ── BARRA DE BÚSQUEDA ── */
+.barra-busqueda {
+    margin: 20px auto 10px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.barra-busqueda input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    backdrop-filter: blur(10px);
+    transition: border 0.3s;
+}
+
+.barra-busqueda input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.barra-busqueda input:focus {
+    border-color: #00c3ff;
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+}
+
+/* ── CONTADOR ── */
+.contador-info {
+    margin: 8px auto 16px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ── TABLA ── */
+.tabla-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto; /* Para que no se rompa en pantallas pequeñas */
+}
+
+#tablaVehiculos {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+#tablaVehiculos thead {
+    background: linear-gradient(90deg, #1e2a38, #2c3e50);
+}
+
+#tablaVehiculos th {
+    padding: 14px 16px;
+    color: #00c3ff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+#tablaVehiculos td {
+    padding: 12px 16px;
+    color: white;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+#tablaVehiculos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#tablaVehiculos tbody tr:hover {
+    background: rgba(0, 195, 255, 0.08);
+    transition: background 0.2s;
+}
+
+/* ── BADGE DE PLACA ── */
+.badge-placa {
+    background: rgba(0, 195, 255, 0.15);
+    color: #00c3ff;
+    border: 1px solid rgba(0, 195, 255, 0.4);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}
+
+/* ── TIEMPO ACTIVO (celda parpadeante leve) ── */
+.tiempo-activo {
+    font-family: 'Courier New', monospace;
+    color: #7dffb3;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ── MENSAJE PARQUEADERO VACÍO ── */
+.mensaje-vacio {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+}

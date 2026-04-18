@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial - Parking SB</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/entrada.css">
+    <link rel="stylesheet" href="./CSS/lista.css">
+    <link rel="stylesheet" href="./CSS/historial.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Logo Parking SB">
+            <span>Parking SB</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="entrada.html">Entrada</a></li>
+            <li><a href="salida.html">Salida</a></li>
+            <li><a href="lista.html">Vehículos</a></li>
+            <li><a href="historial.html">Historial</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Historial de Pagos</h1>
+            <p>Registro completo de todos los vehículos que han salido del parqueadero.</p>
+        </div>
+
+        <!-- Resumen de ingresos -->
+        <div class="resumen-cards">
+            <div class="resumen-card">
+                <span class="resumen-icono"></span>
+                <p class="resumen-numero" id="totalVehiculos">0</p>
+                <p class="resumen-label">Vehículos atendidos</p>
+            </div>
+            <div class="resumen-card destacado">
+                <span class="resumen-icono"></span>
+                <p class="resumen-numero" id="totalIngresos">$0</p>
+                <p class="resumen-label">Total recaudado</p>
+            </div>
+            <div class="resumen-card">
+                <span class="resumen-icono"></span>
+                <p class="resumen-numero" id="promedioHoras">0h</p>
+                <p class="resumen-label">Promedio de horas</p>
+            </div>
+        </div>
+
+        <!-- Barra de búsqueda y botón limpiar -->
+        <div class="barra-busqueda" style="display:flex; gap:10px; max-width:500px;">
+            <input type="text" id="inputBuscar" placeholder="🔍 Buscar por placa..." oninput="filtrarHistorial()" style="flex:1;">
+            <button onclick="limpiarHistorial()" class="btn-limpiar">🗑️ Limpiar</button>
+        </div>
+
+        <!-- Contador -->
+        <div class="contador-info">
+            <span id="contadorTexto">Cargando...</span>
+        </div>
+
+        <!-- Tabla -->
+        <div class="tabla-wrapper">
+            <table id="tablaHistorial">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Placa</th>
+                        <th>Tipo</th>
+                        <th>Ingreso</th>
+                        <th>Salida</th>
+                        <th>Horas</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoHistorial">
+                </tbody>
+            </table>
+
+            <div id="mensajeVacio" class="mensaje-vacio" style="display:none;">
+                <p>Aún no hay registros en el historial.</p>
+            </div>
+        </div>
+
+        <!-- Botones navegación -->
+        <div class="botones-navegacion" style="max-width:400px; margin: 20px auto;">
+            <a href="index.html" class="btn-nav btn-inicio">Volver al Inicio</a>
+            <a href="salida.html" class="btn-nav btn-salida">Registrar Salida</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/historial.js"></script>
+</body>
+</html>
